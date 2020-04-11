@@ -1,0 +1,4 @@
+-LLevar el tiempo 
+-Crear Perfiles
+-Estadisticas de tiempo
+
