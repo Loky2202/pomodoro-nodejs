@@ -1,6 +1,7 @@
 const express = require('express');
 const Router = require('./router/index');
 const hbs = require('express-hbs');
+const path = require('path');
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.engine('hbs', hbs.express4({
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
-
+app.use(express.static(path.join(__dirname + '/public')))
 
 
 app.use('/', Router());

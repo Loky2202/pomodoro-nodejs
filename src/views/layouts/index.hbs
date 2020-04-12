@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Pagina Principal</title>
 </head>
+
 <body>
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            Metodo Podomoro
+        </a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Default</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Matematicas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Curso Node</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Libro</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                        Perfil: 
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row justify-content-md-center">
+                                        <div class="col col-lg-2">
+                                            <button id="iniciar" type="button" class="btn btn-success btn-block">Iniciar</button>
+                                        </div>
+                                        <div class="col col-lg-2">
+                                            <button type="button" class="btn btn-secondary btn-block">Reinciar</button>
+                                        </div>
+                                        <div class="col col-lg-2">
+                                            <button id="parar" type="button" class="btn btn-danger btn-block">Parar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <br>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col text-center">
+                                    <div>
+                                        <span class="h1" id="minutos">20</span><span class="h1">:</span><span class="h1" id="segundos">00</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {{{body}}}
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
 </body>
+
 </html>
