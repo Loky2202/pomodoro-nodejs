@@ -22,13 +22,13 @@
             <div class="col">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Default</a>
+                        <a class="nav-link active" href="/">Default</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Matematicas</a>
+                        <a class="nav-link active" href="/matematicas">Matematicas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Curso Node</a>
+                        <a class="nav-link active" href="/cursoNode">Curso Node</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Libro</a>
@@ -38,11 +38,11 @@
             <div class="col-10">
                 <div class="card">
                     <div class="card-header">
-                        Perfil: 
+                        Perfil: {{perfil}}
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                        <p>NO PUEDES HACER NADA MAS POR 25 MIN.</p>
                         <div class="container">
                             <div class="row">
                                 <div class="col">
@@ -65,14 +65,15 @@
                             <div class="row align-items-center">
                                 <div class="col text-center">
                                     <div>
-                                        <span class="h1" id="minutos">00</span><span class="h1">:</span><span class="h1" id="segundos">04</span>
+                                        <span class="h1" id="minutos">{{min}}</span><span class="h1">:</span><span class="h1" id="segundos">{{seg}}</span> 
+                                        
                                     </div>
 
                                 </div>
                             </div>
                             
                         </div>
-                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        <footer class="blockquote-footer">"Somos el resultado de lo que hacemos repetidamente. La excelencia entonces, no es un acto, sino un habito."<cite title="Source Title">- Aristóteles</cite></footer>
                         </blockquote>
                     </div>
                 </div>
@@ -90,7 +91,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script src="/js/app.js"></script>
+    <script src="/js/crono.js"></script>
 </body>
 
 </html>

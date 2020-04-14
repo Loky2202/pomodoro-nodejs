@@ -28,6 +28,7 @@ const iniciar = document.getElementById('iniciar')
 const parar = document.getElementById('parar')
 const reiniciar = document.getElementById('reiniciar')
 
+
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
@@ -38,7 +39,7 @@ let oriMin = valorMin;
 let oriSeg = valorSeg;
 
 iniciar.addEventListener('click', (e) => {
-    
+    let audio = new Audio('http://localhost:3000'+'/audio/alert.mp3')
     e.target.setAttribute('disabled', 'true')
     e.target.setAttribute('aria-disabled', 'true')
     const timer = new Timer(function() {
@@ -56,7 +57,8 @@ iniciar.addEventListener('click', (e) => {
             segundos.innerHTML = ('0' + valorSeg).slice(-2)
         }
         if (valorMin == -1) {
-            mensajeE()
+            
+            audio.play()
             valorMin = (parseInt(minutos.textContent) + 1)
             valorSeg = oriSeg
             minutos.innerHTML = ('0' + oriMin).slice(-2)
@@ -90,10 +92,4 @@ iniciar.addEventListener('click', (e) => {
 
 
 
-
-
-
-const mensajeE = () => {
-    alert('Tiempo!!!!')
-}
 

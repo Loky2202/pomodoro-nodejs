@@ -1,14 +1,11 @@
 
 const Router = require('express').Router();
 
+const perfilController = require('../controllers/perfiles');
 
 
-
-Router.get('/', (req, res) => {
-    res.render('home', {
-        variable: '<h1>Variable</h1>'
-    })
-})
+Router.get('/', perfilController.index)
+Router.get('/:perfil', perfilController.perfil)
 
 
 

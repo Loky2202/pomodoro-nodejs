@@ -8,12 +8,13 @@ const app = express();
 
  
 // Use `.hbs` for extensions and find partials in `views/partials`.
+app.set('views', __dirname + '/views');
 app.engine('hbs', hbs.express4({
   partialsDir: __dirname + '/views/partials',
   layoutsDir: __dirname + '/views/layouts'
 }));
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
+
 
 app.use(express.static(path.join(__dirname + '/public')))
 
