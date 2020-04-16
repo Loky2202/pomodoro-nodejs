@@ -32,14 +32,13 @@ const reiniciar = document.getElementById('reiniciar')
 const minutos = document.getElementById('minutos');
 const segundos = document.getElementById('segundos');
 
-let valorMin = parseInt(minutos.textContent)
-let valorSeg = parseInt(segundos.textContent)
-
-let oriMin = valorMin;
-let oriSeg = valorSeg;
-
 iniciar.addEventListener('click', (e) => {
     let audio = new Audio('http://localhost:3000'+'/audio/alert.mp3')
+    let valorMin = parseInt(minutos.textContent)
+    let valorSeg = parseInt(segundos.textContent)
+
+    let oriMin = valorMin;
+    let oriSeg = valorSeg;
     e.target.setAttribute('disabled', 'true')
     e.target.setAttribute('aria-disabled', 'true')
     const timer = new Timer(function() {
@@ -58,6 +57,7 @@ iniciar.addEventListener('click', (e) => {
         }
         if (valorMin == -1) {
             
+            timer.stop()
             audio.play()
             valorMin = (parseInt(minutos.textContent) + 1)
             valorSeg = oriSeg
@@ -65,7 +65,7 @@ iniciar.addEventListener('click', (e) => {
             segundos.innerHTML = ('0' + oriSeg).slice(-2)
             e.target.removeAttribute('disabled')
             e.target.removeAttribute('aria-disabled')
-            timer.stop()
+            
     
         }
     }, 1000);
