@@ -2,7 +2,7 @@
 
 exports.index = (req, res, next) => {
     res.render('home', {
-        perfil: 'Default',
+        perfil: 'Pomodoro',
         min: '25',
         seg: '00'
     })
@@ -10,10 +10,20 @@ exports.index = (req, res, next) => {
 
 exports.perfil = async (req, res, next) => {
 
+    const perfil=  req.params.perfil;
+
+    let min = '00';
+    if(perfil === 'corto'){
+        min = '05';
+    }else if (perfil === 'largo') {
+        min = '10';
+    } else {
+        res.redirect('/');
+    }
 
     res.render('home', {
-        perfil: req.params.perfil,
-        min: '00',
-        seg: '04'
+        perfil: 'Descanso...',
+        min,
+        seg: '00'
     })
 }

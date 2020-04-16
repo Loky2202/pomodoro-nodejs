@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Pagina Principal</title>
+    <title>Metodo Podomoro</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-dark bg-primary">
+<body style="background-color: #565488;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">
             <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30"
                 class="d-inline-block align-top" alt="">
@@ -20,29 +20,26 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <ul class="nav flex-column">
+                <ul class="nav flex-column h4">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Default</a>
+                        <a class="nav-link w-50 p-2" href="/">Pomodoro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/matematicas">Matematicas</a>
+                        <a class="nav-link w-50 p-2" href="/corto">Descanso Corto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/cursoNode">Curso Node</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Libro</a>
+                        <a class="nav-link w-50 p-2" href="/largo">Descanso Largo</a>
                     </li>
                 </ul>
             </div>
             <div class="col-10">
-                <div class="card">
+                <div class="card" style="background-color: #00b7d4;">
                     <div class="card-header">
-                        Perfil: {{perfil}}
+                        <p class="text-monospace h1">{{perfil}}</p>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #2f3f80;">
                         <blockquote class="blockquote mb-0">
-                        <p>NO PUEDES HACER NADA MAS POR 25 MIN.</p>
+                        <p class="text-capitalize text-center text-warning">NO PUEDES HACER OTRA TAREA POR MAS POR 25 MIN.</p>
                         <div class="container">
                             <div class="row">
                                 <div class="col">
@@ -65,13 +62,17 @@
                             <div class="row align-items-center">
                                 <div class="col text-center">
                                     <div>
-                                        <span class="h1" id="minutos">{{min}}</span><span class="h1">:</span><span class="h1" id="segundos">{{seg}}</span> 
+                                        <span class="h1 text-white" id="minutos">{{min}}</span><span class="h1 text-white">:</span><span class="h1 text-white" id="segundos">{{seg}}</span> 
                                         
                                     </div>
 
                                 </div>
                             </div>
                             
+                        </div>
+                        <div class="container">
+                            <br>
+                            <br>
                         </div>
                         <footer class="blockquote-footer">"Somos el resultado de lo que hacemos repetidamente. La excelencia entonces, no es un acto, sino un habito."<cite title="Source Title">- Aristóteles</cite></footer>
                         </blockquote>
@@ -80,7 +81,6 @@
             </div>
         </div>
     </div>
-    {{{body}}}
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
